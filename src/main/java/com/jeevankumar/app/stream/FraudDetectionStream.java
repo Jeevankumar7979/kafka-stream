@@ -28,7 +28,6 @@ public class FraudDetectionStream {
                 .to("fraud-alerts", Produced.with(Serdes.String(), new TransactionSerde()));
         return transactions;
 
-
     }
 
 }
