@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: kafka-stream-fradulent
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.jeevankumar.app.serdes.TransactionSerializer
+    streams:
+      application-id: fraud-detection-streams
+      properties:
+        default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        default.value.serde: com.jeevankumar.app.serdes.TransactionSerde
+server:
+  port: 9090
