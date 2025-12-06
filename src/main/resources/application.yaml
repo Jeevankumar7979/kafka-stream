@@ -11,5 +11,6 @@ spring:
       properties:
         default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
         default.value.serde: com.jeevankumar.app.serdes.TransactionSerde
+      state-dir: /Users/jeevankumar/Desktop/kafka-stream-logs
 server:
   port: 9090
